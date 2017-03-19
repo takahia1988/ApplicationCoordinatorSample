@@ -7,21 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		917D9F361E7E3EA60043E661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D9F351E7E3EA60043E661 /* AppDelegate.swift */; };
-		917D9F381E7E3EA60043E661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D9F371E7E3EA60043E661 /* ViewController.swift */; };
-		917D9F3B1E7E3EA60043E661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917D9F391E7E3EA60043E661 /* Main.storyboard */; };
-		917D9F3D1E7E3EA60043E661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917D9F3C1E7E3EA60043E661 /* Assets.xcassets */; };
+		915927101E7ECE78007C43E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159270F1E7ECE78007C43E5 /* AppDelegate.swift */; };
+		915927121E7ECE84007C43E5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927111E7ECE84007C43E5 /* Coordinator.swift */; };
+		915927151E7ECE8D007C43E5 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927131E7ECE8D007C43E5 /* ApplicationCoordinator.swift */; };
+		915927161E7ECE8D007C43E5 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927141E7ECE8D007C43E5 /* LoginCoordinator.swift */; };
+		915927181E7ECE96007C43E5 /* FoodDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927171E7ECE96007C43E5 /* FoodDto.swift */; };
+		9159271B1E7ECE9F007C43E5 /* ControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927191E7ECE9F007C43E5 /* ControllersFactory.swift */; };
+		9159271C1E7ECE9F007C43E5 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159271A1E7ECE9F007C43E5 /* CoordinatorFactory.swift */; };
+		9159271F1E7ECEAE007C43E5 /* ControllersFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159271D1E7ECEAE007C43E5 /* ControllersFactoryImpl.swift */; };
+		915927201E7ECEAE007C43E5 /* CoordinatorFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159271E1E7ECEAE007C43E5 /* CoordinatorFactoryImpl.swift */; };
+		915927221E7ECEB9007C43E5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927211E7ECEB9007C43E5 /* Router.swift */; };
+		915927241E7ECEC0007C43E5 /* RouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927231E7ECEC0007C43E5 /* RouterImpl.swift */; };
+		915927261E7ECECD007C43E5 /* FoodListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927251E7ECECD007C43E5 /* FoodListTableViewCell.swift */; };
+		9159272C1E7ECED8007C43E5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927271E7ECED8007C43E5 /* WebViewController.swift */; };
+		9159272D1E7ECED8007C43E5 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927281E7ECED8007C43E5 /* TopViewController.swift */; };
+		9159272E1E7ECED8007C43E5 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927291E7ECED8007C43E5 /* Presentable.swift */; };
+		9159272F1E7ECED8007C43E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159272A1E7ECED8007C43E5 /* LoginViewController.swift */; };
+		915927301E7ECED8007C43E5 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159272B1E7ECED8007C43E5 /* FoodListViewController.swift */; };
+		9159273E1E7ECF3A007C43E5 /* FoodListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9159273D1E7ECF3A007C43E5 /* FoodListTableViewCell.xib */; };
+		915927421E7ECF42007C43E5 /* FoodListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9159273F1E7ECF42007C43E5 /* FoodListViewController.xib */; };
+		915927431E7ECF42007C43E5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915927401E7ECF42007C43E5 /* LoginViewController.xib */; };
+		915927441E7ECF42007C43E5 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915927411E7ECF42007C43E5 /* TopViewController.xib */; };
 		917D9F401E7E3EA60043E661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917D9F3E1E7E3EA60043E661 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9159270F1E7ECE78007C43E5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
+		915927111E7ECE84007C43E5 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Classes/Coordinator/Coordinator.swift; sourceTree = "<group>"; };
+		915927131E7ECE8D007C43E5 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationCoordinator.swift; path = Classes/Coordinator/Impl/ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		915927141E7ECE8D007C43E5 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = Classes/Coordinator/Impl/LoginCoordinator.swift; sourceTree = "<group>"; };
+		915927171E7ECE96007C43E5 /* FoodDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDto.swift; path = Classes/Dto/FoodDto.swift; sourceTree = "<group>"; };
+		915927191E7ECE9F007C43E5 /* ControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllersFactory.swift; path = Classes/Factory/ControllersFactory.swift; sourceTree = "<group>"; };
+		9159271A1E7ECE9F007C43E5 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoordinatorFactory.swift; path = Classes/Factory/CoordinatorFactory.swift; sourceTree = "<group>"; };
+		9159271D1E7ECEAE007C43E5 /* ControllersFactoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllersFactoryImpl.swift; path = Classes/Factory/Impl/ControllersFactoryImpl.swift; sourceTree = "<group>"; };
+		9159271E1E7ECEAE007C43E5 /* CoordinatorFactoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoordinatorFactoryImpl.swift; path = Classes/Factory/Impl/CoordinatorFactoryImpl.swift; sourceTree = "<group>"; };
+		915927211E7ECEB9007C43E5 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Classes/Router/Router.swift; sourceTree = "<group>"; };
+		915927231E7ECEC0007C43E5 /* RouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouterImpl.swift; path = Classes/Router/Impl/RouterImpl.swift; sourceTree = "<group>"; };
+		915927251E7ECECD007C43E5 /* FoodListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodListTableViewCell.swift; path = Classes/View/Cell/FoodListTableViewCell.swift; sourceTree = "<group>"; };
+		915927271E7ECED8007C43E5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Classes/ViewController/WebViewController.swift; sourceTree = "<group>"; };
+		915927281E7ECED8007C43E5 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopViewController.swift; path = Classes/ViewController/TopViewController.swift; sourceTree = "<group>"; };
+		915927291E7ECED8007C43E5 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presentable.swift; path = Classes/ViewController/Presentable.swift; sourceTree = "<group>"; };
+		9159272A1E7ECED8007C43E5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Classes/ViewController/LoginViewController.swift; sourceTree = "<group>"; };
+		9159272B1E7ECED8007C43E5 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodListViewController.swift; path = Classes/ViewController/FoodListViewController.swift; sourceTree = "<group>"; };
+		9159273D1E7ECF3A007C43E5 /* FoodListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FoodListTableViewCell.xib; path = Resources/Xib/Cell/FoodListTableViewCell.xib; sourceTree = "<group>"; };
+		9159273F1E7ECF42007C43E5 /* FoodListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FoodListViewController.xib; path = Resources/Xib/ViewController/FoodListViewController.xib; sourceTree = "<group>"; };
+		915927401E7ECF42007C43E5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Resources/Xib/ViewController/LoginViewController.xib; sourceTree = "<group>"; };
+		915927411E7ECF42007C43E5 /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopViewController.xib; path = Resources/Xib/ViewController/TopViewController.xib; sourceTree = "<group>"; };
 		917D9F321E7E3EA60043E661 /* ApplicationCoordinatorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationCoordinatorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		917D9F351E7E3EA60043E661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		917D9F371E7E3EA60043E661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		917D9F3A1E7E3EA60043E661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		917D9F3C1E7E3EA60043E661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		917D9F3F1E7E3EA60043E661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		917D9F411E7E3EA60043E661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +68,146 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		915927031E7ECD99007C43E5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9159270F1E7ECE78007C43E5 /* AppDelegate.swift */,
+				915927041E7ECDA6007C43E5 /* Coordinator */,
+				915927051E7ECDAE007C43E5 /* Dto */,
+				915927061E7ECDB6007C43E5 /* Factory */,
+				915927071E7ECDCC007C43E5 /* Router */,
+				915927081E7ECDD4007C43E5 /* View */,
+				915927091E7ECDDE007C43E5 /* ViewController */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		915927041E7ECDA6007C43E5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				915927111E7ECE84007C43E5 /* Coordinator.swift */,
+				9159270D1E7ECE2D007C43E5 /* Impl */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		915927051E7ECDAE007C43E5 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				915927171E7ECE96007C43E5 /* FoodDto.swift */,
+			);
+			name = Dto;
+			sourceTree = "<group>";
+		};
+		915927061E7ECDB6007C43E5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				915927191E7ECE9F007C43E5 /* ControllersFactory.swift */,
+				9159271A1E7ECE9F007C43E5 /* CoordinatorFactory.swift */,
+				9159270C1E7ECE27007C43E5 /* Impl */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		915927071E7ECDCC007C43E5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				915927211E7ECEB9007C43E5 /* Router.swift */,
+				9159270B1E7ECE22007C43E5 /* Impl */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		915927081E7ECDD4007C43E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9159270A1E7ECE12007C43E5 /* Cell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		915927091E7ECDDE007C43E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				915927271E7ECED8007C43E5 /* WebViewController.swift */,
+				915927281E7ECED8007C43E5 /* TopViewController.swift */,
+				915927291E7ECED8007C43E5 /* Presentable.swift */,
+				9159272A1E7ECED8007C43E5 /* LoginViewController.swift */,
+				9159272B1E7ECED8007C43E5 /* FoodListViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9159270A1E7ECE12007C43E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				915927251E7ECECD007C43E5 /* FoodListTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9159270B1E7ECE22007C43E5 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				915927231E7ECEC0007C43E5 /* RouterImpl.swift */,
+			);
+			name = Impl;
+			sourceTree = "<group>";
+		};
+		9159270C1E7ECE27007C43E5 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				9159271D1E7ECEAE007C43E5 /* ControllersFactoryImpl.swift */,
+				9159271E1E7ECEAE007C43E5 /* CoordinatorFactoryImpl.swift */,
+			);
+			name = Impl;
+			sourceTree = "<group>";
+		};
+		9159270D1E7ECE2D007C43E5 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				915927131E7ECE8D007C43E5 /* ApplicationCoordinator.swift */,
+				915927141E7ECE8D007C43E5 /* LoginCoordinator.swift */,
+			);
+			name = Impl;
+			sourceTree = "<group>";
+		};
+		9159270E1E7ECE48007C43E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9159273A1E7ECF20007C43E5 /* Xib */,
+				917D9F3E1E7E3EA60043E661 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9159273A1E7ECF20007C43E5 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				9159273B1E7ECF26007C43E5 /* Cell */,
+				9159273C1E7ECF2B007C43E5 /* ViewController */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		9159273B1E7ECF26007C43E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9159273D1E7ECF3A007C43E5 /* FoodListTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9159273C1E7ECF2B007C43E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9159273F1E7ECF42007C43E5 /* FoodListViewController.xib */,
+				915927401E7ECF42007C43E5 /* LoginViewController.xib */,
+				915927411E7ECF42007C43E5 /* TopViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		917D9F291E7E3EA50043E661 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +227,8 @@
 		917D9F341E7E3EA60043E661 /* ApplicationCoordinatorSample */ = {
 			isa = PBXGroup;
 			children = (
-				917D9F351E7E3EA60043E661 /* AppDelegate.swift */,
-				917D9F371E7E3EA60043E661 /* ViewController.swift */,
-				917D9F391E7E3EA60043E661 /* Main.storyboard */,
-				917D9F3C1E7E3EA60043E661 /* Assets.xcassets */,
-				917D9F3E1E7E3EA60043E661 /* LaunchScreen.storyboard */,
-				917D9F411E7E3EA60043E661 /* Info.plist */,
+				915927031E7ECD99007C43E5 /* Classes */,
+				9159270E1E7ECE48007C43E5 /* Resources */,
 			);
 			path = ApplicationCoordinatorSample;
 			sourceTree = "<group>";
@@ -96,6 +265,7 @@
 				TargetAttributes = {
 					917D9F311E7E3EA50043E661 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,9 +293,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				915927431E7ECF42007C43E5 /* LoginViewController.xib in Resources */,
 				917D9F401E7E3EA60043E661 /* LaunchScreen.storyboard in Resources */,
-				917D9F3D1E7E3EA60043E661 /* Assets.xcassets in Resources */,
-				917D9F3B1E7E3EA60043E661 /* Main.storyboard in Resources */,
+				915927421E7ECF42007C43E5 /* FoodListViewController.xib in Resources */,
+				915927441E7ECF42007C43E5 /* TopViewController.xib in Resources */,
+				9159273E1E7ECF3A007C43E5 /* FoodListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,28 +308,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				917D9F381E7E3EA60043E661 /* ViewController.swift in Sources */,
-				917D9F361E7E3EA60043E661 /* AppDelegate.swift in Sources */,
+				9159271F1E7ECEAE007C43E5 /* ControllersFactoryImpl.swift in Sources */,
+				915927121E7ECE84007C43E5 /* Coordinator.swift in Sources */,
+				915927221E7ECEB9007C43E5 /* Router.swift in Sources */,
+				915927181E7ECE96007C43E5 /* FoodDto.swift in Sources */,
+				915927241E7ECEC0007C43E5 /* RouterImpl.swift in Sources */,
+				9159271C1E7ECE9F007C43E5 /* CoordinatorFactory.swift in Sources */,
+				9159272D1E7ECED8007C43E5 /* TopViewController.swift in Sources */,
+				915927101E7ECE78007C43E5 /* AppDelegate.swift in Sources */,
+				9159272E1E7ECED8007C43E5 /* Presentable.swift in Sources */,
+				915927201E7ECEAE007C43E5 /* CoordinatorFactoryImpl.swift in Sources */,
+				915927161E7ECE8D007C43E5 /* LoginCoordinator.swift in Sources */,
+				915927261E7ECECD007C43E5 /* FoodListTableViewCell.swift in Sources */,
+				9159272F1E7ECED8007C43E5 /* LoginViewController.swift in Sources */,
+				9159271B1E7ECE9F007C43E5 /* ControllersFactory.swift in Sources */,
+				915927301E7ECED8007C43E5 /* FoodListViewController.swift in Sources */,
+				9159272C1E7ECED8007C43E5 /* WebViewController.swift in Sources */,
+				915927151E7ECE8D007C43E5 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		917D9F391E7E3EA60043E661 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				917D9F3A1E7E3EA60043E661 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		917D9F3E1E7E3EA60043E661 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				917D9F3F1E7E3EA60043E661 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -260,10 +440,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ApplicationCoordinatorSample/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ApplicationCoordinatorSample/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.takahia.ApplicationCoordinatorSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,7 +454,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ApplicationCoordinatorSample/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ApplicationCoordinatorSample/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.takahia.ApplicationCoordinatorSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +482,7 @@
 				917D9F461E7E3EA60043E661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

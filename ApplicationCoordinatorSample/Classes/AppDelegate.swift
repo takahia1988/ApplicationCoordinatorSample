@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ApplicationCoordinatorSample
 //
-//  Created by Hiasa, Takahiro | Mia | ESDD on 2017/03/19.
+//  Created by Hiasa, Takahiro on 2017/03/19.
 //  Copyright © 2017年 takahia. All rights reserved.
 //
 
@@ -12,10 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private lazy var applicationCoordinator: ApplicationCoordinator = CoordinatorFactoryImpl().createApplicationCoordinator(window: self.window!)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.applicationCoordinator.start()
         return true
     }
 
