@@ -33,7 +33,7 @@ class LoginViewController: UIViewController, LoginTransition {
                                   for: .normal)
         self.loginButton.setTitleColor(UIColor.white,
                                        for: .normal)
-        self.loginButton.backgroundColor = UIColor(colorLiteralRed: 30/255,
+        self.loginButton.backgroundColor = UIColor(red: 30/255,
                                                    green: 50/255,
                                                    blue: 97/255,
                                                    alpha: 1.0)
@@ -48,12 +48,12 @@ class LoginViewController: UIViewController, LoginTransition {
     }
     
     //MARK: Private Action
-    func loginButtonAction(sender: UIButton) {
+    @objc func loginButtonAction(sender: UIButton) {
         self.onLoginButtonTap?()
     }
     
     
-    func dismissBarButtonAction(sender: UIBarButtonItem) {
+    @objc func dismissBarButtonAction(sender: UIBarButtonItem) {
         self.onDismissButtonTap?()
     }
     
