@@ -13,6 +13,12 @@ protocol CoordinatorFactory {
     func createApplicationCoordinator(window: UIWindow)
         -> ApplicationCoordinator
     
+    func createMainCoordinator(router: Router)
+        -> MainCoordinator
+    
+    func createDeeplinkCoordinator(router: Router)
+        -> DeeplinkCoordinator
+    
     func createApplicationCoordinator(window: UIWindow,
                                       navigationController: UINavigationController?)
         -> ApplicationCoordinator

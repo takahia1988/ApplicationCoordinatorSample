@@ -10,82 +10,59 @@ import Foundation
 import UIKit
 
 class ApplicationCoordinator: Coordinator {
-    
-    var childCoordinators = [Coordinator]()
-    
-    private let window: UIWindow
+
     private let router: Router
-    private let controllersFactory: ControllersFactory
     private let coordinatorFactory: CoordinatorFactory
     
-    init(window: UIWindow,
-         router: Router,
-         controllersFactory: ControllersFactory,
+    //MARK: initializer
+    init(router: Router,
          coordinatorFactory: CoordinatorFactory) {
-
-        self.window = window
         self.router = router
-        self.controllersFactory = controllersFactory
         self.coordinatorFactory = coordinatorFactory
     }
     
-    func start() {
-        self.showTopViewController()
-    }
-    
-    /*
-     * Top View Controller
-     */
-    func showTopViewController() {
+    //MARK: Coordinator
+    var childCoordinators = [Coordinator]()
 
-        let topTransition = self.controllersFactory.createTopTransition()
-        topTransition.onTopButtonTap = { [weak self] in
-            self?.showLoginViewCoordinator()
+    func start(deeplinkType: DeeplinkType) {
+        switch deeplinkType {
+        case .none:
+            self.showMainCoordinator(deeplinkType: deeplinkType)
+        default:
+            self.showDeeplinkCoordinator(deeplinkType: deeplinkType)
         }
+    }
+    
+    func cancel() { }
 
-        topTransition.onBottomButtonTap = { [weak self] in
-            self?.showFoodListView()
+    /*
+     * Main Transition
+     */
+    private func showMainCoordinator(deeplinkType: DeeplinkType) {
+        let coordinator = self.coordinatorFactory.createMainCoordinator(router: self.router)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.removeChildDependency(coordinator: coordinator)
         }
-        
-        self.router.setRootController(controller: topTransition.toPresent())
-        self.window.rootViewController = self.router.navigatonController
-        self.window.makeKeyAndVisible()
+        coordinator.cancelFlow = { [weak self, weak coordinator] in
+            self?.removeChildDependency(coordinator: coordinator)
+        }
+        self.addChildDependency(coordinator: coordinator)
+        coordinator.start(deeplinkType: deeplinkType)
     }
     
     /*
-     * Push View Controller
+     * Deeplink Transition
      */
-    func showFoodListView() {
-        let foodListTransition = self.controllersFactory.createFoodListTransition()
-        foodListTransition.onCellTap = { [weak self] (url) in
-            self?.showWebView(url: url)
+    private func showDeeplinkCoordinator(deeplinkType: DeeplinkType) {
+        self.cancelAllChildCoordinator()
+        let coordinator = self.coordinatorFactory.createDeeplinkCoordinator(router: self.router)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.showMainCoordinator(deeplinkType: deeplinkType)
+            self?.removeChildDependency(coordinator: coordinator)
         }
-        self.router.push(controller: foodListTransition.toPresent())
+        self.addChildDependency(coordinator: coordinator)
+        coordinator.start(deeplinkType: deeplinkType)
     }
-    
-    func showWebView(url: URL) {
-        let webTransition = self.controllersFactory.createWebTransition(url: url)
-        self.router.push(controller: webTransition.toPresent())
-    }
-    
-    /*
-     * Present View Controller By Coordinator
-     */
-    func showLoginViewCoordinator() {
-        let (loginCoordinator, controller) = self.coordinatorFactory.createLoginCoordinator()
-        loginCoordinator.finishFlow = { [weak self, weak loginCoordinator] in
-            self?.router.dismiss()
-            self?.removeChildDependency(coordinator: loginCoordinator)
-        }
-        
-        loginCoordinator.cancelFlow = { [weak self, weak loginCoordinator] in
-            self?.router.dismiss()
-            self?.removeChildDependency(coordinator: loginCoordinator)
-        }
-        
-        self.addChildDependency(coordinator: loginCoordinator)
-        loginCoordinator.start()
-        self.router.present(controller: controller)
-    }
-    
 }
+
+

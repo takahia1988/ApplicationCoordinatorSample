@@ -33,8 +33,12 @@ class LoginCoordinator: Coordinator, LoginCoordinatorOutput {
         self.coordinatorFactory = coordinatorFactory
     }
     
-    func start() {
+    func start(deeplinkType: DeeplinkType) {
         self.showLoginViewController()
+    }
+    
+    func cancel() {
+        self.cancelFlow?()
     }
     
     func showLoginViewController() {
@@ -48,6 +52,7 @@ class LoginCoordinator: Coordinator, LoginCoordinatorOutput {
         }
         
         self.router.setRootController(controller: loginTransition.toPresent())
-
+        
     }
 }
+

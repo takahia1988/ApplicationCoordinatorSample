@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F8294D61FEC2167007F85B6 /* DeeplinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8294D51FEC2167007F85B6 /* DeeplinkType.swift */; };
+		0F8294D81FEC2188007F85B6 /* DeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8294D71FEC2188007F85B6 /* DeeplinkHandler.swift */; };
+		0F93121F1FED74CE00149E84 /* DeeplinkCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F93121E1FED74CE00149E84 /* DeeplinkCoordinator.swift */; };
+		0F9312221FEE1B7500149E84 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9312211FEE1B7500149E84 /* MainCoordinator.swift */; };
 		915927101E7ECE78007C43E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159270F1E7ECE78007C43E5 /* AppDelegate.swift */; };
 		915927121E7ECE84007C43E5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927111E7ECE84007C43E5 /* Coordinator.swift */; };
 		915927151E7ECE8D007C43E5 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915927131E7ECE8D007C43E5 /* ApplicationCoordinator.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F8294D51FEC2167007F85B6 /* DeeplinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeeplinkType.swift; path = Classes/Deeplink/DeeplinkType.swift; sourceTree = "<group>"; };
+		0F8294D71FEC2188007F85B6 /* DeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeeplinkHandler.swift; path = Classes/Deeplink/DeeplinkHandler.swift; sourceTree = "<group>"; };
+		0F93121E1FED74CE00149E84 /* DeeplinkCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeeplinkCoordinator.swift; path = Classes/Coordinator/Impl/DeeplinkCoordinator.swift; sourceTree = "<group>"; };
+		0F9312211FEE1B7500149E84 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainCoordinator.swift; path = Classes/Coordinator/Impl/MainCoordinator.swift; sourceTree = "<group>"; };
 		9159270F1E7ECE78007C43E5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		915927111E7ECE84007C43E5 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Classes/Coordinator/Coordinator.swift; sourceTree = "<group>"; };
 		915927131E7ECE8D007C43E5 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationCoordinator.swift; path = Classes/Coordinator/Impl/ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -68,11 +76,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8294D41FEC2122007F85B6 /* Deeplink */ = {
+			isa = PBXGroup;
+			children = (
+				0F9312201FED79E800149E84 /* impl */,
+				0F8294D51FEC2167007F85B6 /* DeeplinkType.swift */,
+			);
+			name = Deeplink;
+			sourceTree = "<group>";
+		};
+		0F9312201FED79E800149E84 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				0F8294D71FEC2188007F85B6 /* DeeplinkHandler.swift */,
+			);
+			name = impl;
+			sourceTree = "<group>";
+		};
 		915927031E7ECD99007C43E5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				9159270F1E7ECE78007C43E5 /* AppDelegate.swift */,
 				915927041E7ECDA6007C43E5 /* Coordinator */,
+				0F8294D41FEC2122007F85B6 /* Deeplink */,
 				915927051E7ECDAE007C43E5 /* Dto */,
 				915927061E7ECDB6007C43E5 /* Factory */,
 				915927071E7ECDCC007C43E5 /* Router */,
@@ -167,7 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				915927131E7ECE8D007C43E5 /* ApplicationCoordinator.swift */,
+				0F93121E1FED74CE00149E84 /* DeeplinkCoordinator.swift */,
 				915927141E7ECE8D007C43E5 /* LoginCoordinator.swift */,
+				0F9312211FEE1B7500149E84 /* MainCoordinator.swift */,
 			);
 			name = Impl;
 			sourceTree = "<group>";
@@ -308,8 +336,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F93121F1FED74CE00149E84 /* DeeplinkCoordinator.swift in Sources */,
+				0F9312221FEE1B7500149E84 /* MainCoordinator.swift in Sources */,
 				9159271F1E7ECEAE007C43E5 /* ControllersFactoryImpl.swift in Sources */,
 				915927121E7ECE84007C43E5 /* Coordinator.swift in Sources */,
+				0F8294D81FEC2188007F85B6 /* DeeplinkHandler.swift in Sources */,
 				915927221E7ECEB9007C43E5 /* Router.swift in Sources */,
 				915927181E7ECE96007C43E5 /* FoodDto.swift in Sources */,
 				915927241E7ECEC0007C43E5 /* RouterImpl.swift in Sources */,
@@ -321,6 +352,7 @@
 				915927161E7ECE8D007C43E5 /* LoginCoordinator.swift in Sources */,
 				915927261E7ECECD007C43E5 /* FoodListTableViewCell.swift in Sources */,
 				9159272F1E7ECED8007C43E5 /* LoginViewController.swift in Sources */,
+				0F8294D61FEC2167007F85B6 /* DeeplinkType.swift in Sources */,
 				9159271B1E7ECE9F007C43E5 /* ControllersFactory.swift in Sources */,
 				915927301E7ECED8007C43E5 /* FoodListViewController.swift in Sources */,
 				9159272C1E7ECED8007C43E5 /* WebViewController.swift in Sources */,

@@ -20,13 +20,27 @@ class CoordinatorFactoryImpl: CoordinatorFactory {
     func createApplicationCoordinator(window: UIWindow,
                                       navigationController: UINavigationController?)
         -> ApplicationCoordinator {
-            let router = self.router(navigationController: navigationController)
             
-            return ApplicationCoordinator(window: window,
-                                          router: router,
-                                          controllersFactory: ControllersFactoryImpl(),
+            let router = self.router(navigationController: navigationController)
+            window.rootViewController = router.navigatonController
+            window.makeKeyAndVisible()
+            
+            return ApplicationCoordinator(router: router,
                                           coordinatorFactory: CoordinatorFactoryImpl())
     }
+    
+    func createMainCoordinator(router: Router) -> MainCoordinator {
+        return MainCoordinator(router: router,
+                               controllersFactory: ControllersFactoryImpl(),
+                               coordinatorFactory: CoordinatorFactoryImpl())
+    }
+    
+    func createDeeplinkCoordinator(router: Router) -> DeeplinkCoordinator {
+        return DeeplinkCoordinator(router: router,
+                                   controllersFactory: ControllersFactoryImpl(),
+                                   coordinatorFactory: CoordinatorFactoryImpl())
+    }
+
     
     func createLoginCoordinator()
         -> (Coordinator & LoginCoordinatorOutput, UIViewController) {

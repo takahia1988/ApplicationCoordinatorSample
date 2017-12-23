@@ -11,13 +11,27 @@ import Foundation
 protocol Coordinator: class {
     
     var childCoordinators:[Coordinator] { get set }
-
+    
     func start()
+    func start(deeplinkType: DeeplinkType)
+    func cancel()
+    func cancelAllChildCoordinator()
     func addChildDependency(coordinator: Coordinator)
     func removeChildDependency(coordinator: Coordinator?)
 }
 
 extension Coordinator {
+    
+    func start() {
+        self.start(deeplinkType: .none)
+    }
+    
+    func cancelAllChildCoordinator() {
+        self.childCoordinators.forEach { (coordinator) in
+            coordinator.cancelAllChildCoordinator()
+            coordinator.cancel()
+        }
+    }
     
     func addChildDependency(coordinator: Coordinator) {
         
